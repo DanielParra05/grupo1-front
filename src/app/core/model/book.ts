@@ -1,4 +1,6 @@
 export class Book {
+  id!: number;
   isbn!: string;
-  nombreLibro!: string;
+  title!: string;
+  createAt!: string;
 }
