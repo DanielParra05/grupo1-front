@@ -5,9 +5,9 @@
                 <div class="card">
                     <img src="assets/img/home-img/plus.png" class="card-img-top" alt="Ordenes">
                     <div class="card-body">
-                        <h5 class="card-title">Agregar Lbros</h5>
-                        <p class="card-text">Registrar, editar, eliminar y generar salida de ordenes.</p>
-                        <a href="/ordenes" class="btn btn-primary">Ingresar</a>
+                        <h5 class="card-title">Agregar Libros</h5>
+                        <p class="card-text">Registrar libros.</p>
+                        <a (click)="abrirModal()" class="btn btn-primary">Añadir</a>
                     </div>
                 </div>
             </div>
@@ -15,8 +15,8 @@
                 <div class="card" >
                     <img src="assets/img/home-img/consulta.png" class="card-img-top" alt="Clientes">
                     <div class="card-body">
-                        <h5 class="card-title">Eliminar Libros</h5>
-                        <p class="card-text">Crear, editar, eliminar  y visualizar clientes.</p>
+                        <h5 class="card-title">Consultar Libros</h5>
+                        <p class="card-text">Consultar libros.</p>
                         <a href="/clientes" class="btn btn-primary">Ingresar</a>
                     </div>
                 </div>
@@ -25,8 +25,8 @@
                 <div class="card" >
                     <img src="assets/img/home-img/delete.png" class="card-img-top" alt="Ajustes">
                     <div class="card-body">
-                        <h5 class="card-title">Prestar Libros</h5>
-                        <p class="card-text">Editar encabezado y píe de página de impresiones.</p>
+                        <h5 class="card-title">Eliminar Libros</h5>
+                        <p class="card-text">Remover libros.</p>
                         <a href="/ajustes" class="btn btn-primary">Ingresar</a>
                     </div>
                 </div>
@@ -35,8 +35,8 @@
                 <div class="card" >
                     <img src="assets/img/home-img/prestamo.png" class="card-img-top" alt="Contabilidad">
                     <div class="card-body">
-                        <h5 class="card-title">Consultar Libros</h5>
-                        <p class="card-text">penmdiente para la determiand descripcion.</p>
+                        <h5 class="card-title">Prestamo de Libros</h5>
+                        <p class="card-text">Prestar libros.</p>
                         <a href="/contabilidad" class="btn btn-primary">Ingresar</a>
                     </div>
                 </div>
@@ -44,3 +44,53 @@
         </div>
     </div>
 </section>
+
+<!-- 
+<div mdbModal class="modal fade" id="salidaModal" tabindex="-1" role="dialog" aria-labelledby="salidaModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="salidaModalLongTitle">Finalizar Orden</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group col-sm">
+          <label for="valorArreglo" style="font-weight: bold;" class="col-form-label">Valor del arreglo:</label>
+          <div class="col-sm-6"></div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">$</span>
+            </div>
+            <input type="number" class="form-control" aria-describedby="basic-addon1" name="valorArreglo"
+              #valorArreglo="ngModel" [(ngModel)]="ordenSalida.valorArreglo">
+          </div>
+        </div>
+        <div class="form-group col-sm">
+          <label for="valorRepuestos" style="font-weight: bold;" class="col-form-label">Valor de los repuestos
+            usados:</label>
+          <div class="col-sm-6"></div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">$</span>
+            </div>
+            <input type="number" class="form-control" aria-describedby="basic-addon1" name="valorRepuestos"
+              #valorRepuestos="ngModel" [(ngModel)]="ordenSalida.valorRepuestos">
+          </div>
+        </div>
+        <div class="form-group col-sm">
+          <label for="marca" style="font-weight: bold;" class="col-form-label">Fecha de salida:</label>
+          <div class="col-sm-6"></div>
+          <input [(ngModel)]="ordenSalida.fechaSalida" type="date" class="form-control" name="fechSalida"
+            #fechSalida="ngModel">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary" (click)='generarSalida()'>Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>-->
