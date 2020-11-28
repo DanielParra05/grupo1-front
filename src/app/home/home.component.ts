@@ -9,11 +9,11 @@ import { BookService } from "./../core/service/book.service";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-  constructor(private bookService: BookService) {}
+
+  constructor(public bookService: BookService) {}
   ngOnInit(): void {}
 
   abrirModal() {
-    console.log("HOLAAAAA");
     this.bookService.abrirModal();
   }
 }
