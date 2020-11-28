@@ -24,9 +24,6 @@ export class BookService {
   create(book: Book) : Observable<any> {
     return this.http.post<Book>(this.urlEndPoint, book, {headers : this.httpHeaders}).pipe(
       catchError(e => {
-        if(e.status == 400){
-          return throwError(e);
-        }
         console.error(e.error.mensaje);
         Swal.fire(e.error.mensaje, e.error.error, 'error');
         return throwError(e);
