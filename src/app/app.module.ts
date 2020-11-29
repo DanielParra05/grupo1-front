@@ -9,6 +9,7 @@ import { CreatebookComponent } from './createbook/createbook.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BooksqueryComponent } from './booksquery/booksquery.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -22,7 +23,8 @@ const routes: Routes = [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    CreatebookComponent
+    CreatebookComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

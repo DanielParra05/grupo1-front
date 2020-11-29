@@ -5,7 +5,7 @@ import { Component, OnInit } from "@angular/core";
   templateUrl: "./header.component.html",
 })
 export class HeaderComponent implements OnInit {
-  titulo = "Libreria Grupo 1";
+  titulo = "Biblioteca - Grupo 1";
   constructor() {}
 
   ngOnInit(): void {}
