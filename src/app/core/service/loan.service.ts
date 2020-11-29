@@ -19,7 +19,7 @@ export class LoanService {
 
   getLoans(): Observable<Loan[]> {
     return this.http
-      .get(`${environment.url_api_loan}/loans`)
+      .get(`${environment.url_api_loan}`)
       .pipe(map((response) => response as Loan[]));
   }
 
