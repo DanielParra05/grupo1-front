@@ -27,9 +27,9 @@ const routes: Routes = [
     HeaderComponent,
     HomeComponent,
     CreatebookComponent,
-    CreateloanComponent
-    DeletebookComponent
-    FooterComponent,
+    CreateloanComponent,
+    DeletebookComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
