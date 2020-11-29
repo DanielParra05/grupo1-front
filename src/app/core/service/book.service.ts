@@ -57,7 +57,7 @@ export class BookService {
 
   getAvailableBooks(): Observable<Book[]> {
     return this.http
-      .get(`${environment.url_api_book}`)
+      .get(`${environment.url_api_book}/all/true`)
       .pipe(map((response) => response as Book[]));
   }
 
