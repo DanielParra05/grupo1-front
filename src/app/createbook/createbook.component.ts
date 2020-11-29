@@ -30,6 +30,7 @@ export class CreatebookComponent implements OnInit {
   create() : void {
     this.bookService.create(this.book).subscribe(
       response => {
+        this.cerrarModal();
         this.router.navigate(['/home'])
         Swal.fire('Libro guardado', `El libro ${response.isbn} se guardó exitosamente`, 'success');
       }, err => {
