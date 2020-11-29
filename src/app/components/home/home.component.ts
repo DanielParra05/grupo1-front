@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import swal from "sweetalert2";
-import { BookService } from "./../core/service/book.service";
+import { BookService } from "../../core/service/book.service";
 
 @Component({
   selector: "app-home",
@@ -12,11 +11,11 @@ export class HomeComponent implements OnInit {
   constructor(public bookService: BookService) {}
   ngOnInit(): void {}
 
-  abrirModal() {
+  openModalCreate() {
     this.bookService.abrirModal();
   }
 
-  abrirModalEliminar() {
+  openModalDelete() {
     this.bookService.abrirModalEliminar();
   }
 }

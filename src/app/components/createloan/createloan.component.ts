@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import swal from "sweetalert2";
-import { Loan } from "../core/model/loan";
-import { LoanService } from "../core/service/loan.service";
+import { Loan } from "../../core/model/loan";
+import { LoanService } from "../../core/service/loan.service";
 import Swal from 'sweetalert2';
-import { Book } from '../core/model/book';
+import { Book } from '../../core/model/book';
 
 @Component({
   selector: "app-createloan",

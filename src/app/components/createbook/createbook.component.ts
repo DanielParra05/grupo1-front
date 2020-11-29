@@ -1,13 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { Book } from '../core/model/book';
-import { BookService } from "./../core/service/book.service";
+import { Book } from '../../core/model/book';
+import { BookService } from "../../core/service/book.service";
 
 @Component({
   selector: "app-createbook",
   templateUrl: "./createbook.component.html",
-  styleUrls: ['./../app.component.css'],
+  styleUrls: ['./../../app.component.css'],
 })
 export class CreatebookComponent implements OnInit {
 
@@ -34,12 +34,9 @@ export class CreatebookComponent implements OnInit {
         this.router.navigate(['/home'])
         Swal.fire('Libro guardado', `El libro ${response.isbn} se guardó exitosamente`, 'success');
       }, err => {
+        this.cerrarModal();
         Swal.fire('Error', 'Se presentó un error guardando el libro', 'error');
       }
     );
-  }
-
-  update() : void {
-    console.log("Está tratando de actualizar");
   }
 }

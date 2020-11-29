@@ -2,16 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { CreatebookComponent } from './createbook/createbook.component';
+import { HomeComponent } from './components/home/home.component';
+import { CreatebookComponent } from './components/createbook/createbook.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BooksqueryComponent } from './booksquery/booksquery.component';
-import { FooterComponent } from './footer/footer.component';
-import { CreateloanComponent } from './createloan/createloan.component';
-import { DeletebookComponent } from './deletebook/deletebook.component';
+import { BooksqueryComponent } from './components/booksquery/booksquery.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CreateloanComponent } from './components/createloan/createloan.component';
+import { DeletebookComponent } from './components/deletebook/deletebook.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },

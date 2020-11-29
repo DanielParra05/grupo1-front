@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Book } from "../core/model/book";
-import { Loan } from "../core/model/loan";
-import { BookService } from "../core/service/book.service";
-import { LoanService } from "../core/service/loan.service";
+import { Book } from "../../core/model/book";
+import { Loan } from "../../core/model/loan";
+import { BookService } from "../../core/service/book.service";
+import { LoanService } from "../../core/service/loan.service";
 
 @Component({
   selector: "app-booksquery",

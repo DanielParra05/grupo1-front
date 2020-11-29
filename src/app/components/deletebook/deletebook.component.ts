@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { Book } from '../core/model/book';
-import { BookService } from '../core/service/book.service';
+import { Book } from '../../core/model/book';
+import { BookService } from '../../core/service/book.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-deletebook',
   templateUrl: './deletebook.component.html',
-  styleUrls: ['./../app.component.css'],
+  styleUrls: ['./../../app.component.css'],
 })
 export class DeletebookComponent {
 
