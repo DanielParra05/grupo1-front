@@ -32,7 +32,7 @@ export class CreatebookComponent implements OnInit {
       response => {
         this.cerrarModal();
         this.router.navigate(['/home'])
-        Swal.fire('Libro guardado', `El libro ${response.isbn} se guardó exitosamente`, 'success');
+        Swal.fire('Libro guardado', `El libro ${response.title} se guardó exitosamente`, 'success');
       }, err => {
         this.cerrarModal();
         Swal.fire('Error', 'Se presentó un error guardando el libro', 'error');

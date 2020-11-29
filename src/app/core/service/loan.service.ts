@@ -27,7 +27,7 @@ export class LoanService {
     return this.http.post<Loan>(`${environment.url_api_loan}`, loan, {headers : this.httpHeaders}).pipe(
       catchError(e => {
         console.error(e.error.mensaje);
-        Swal.fire(e.error.mensaje, e.error.error, 'error');
+        Swal.fire("No se pudo hacer el prestamo", e.error.message, 'error');
         return throwError(e);
       })
     );

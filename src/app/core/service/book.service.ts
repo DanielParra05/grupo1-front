@@ -33,7 +33,7 @@ export class BookService {
     return this.http.delete<void>(`${environment.url_api_book}/${book.isbn}`).pipe(
       catchError(e => {
         console.error(e.error.mensaje);
-        Swal.fire(e.error.mensaje, e.error.error, 'error');
+        Swal.fire("No se pudo eliminar el libro", e.error.message, 'error');
         return throwError(e);
       })
     );

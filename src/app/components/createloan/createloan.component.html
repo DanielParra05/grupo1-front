@@ -35,8 +35,8 @@
             </div>
           </div>
           <div class="text-center">
-            <a class="btn btn-dark btn-lg" style="margin-right: 1%;" href="#">Volver</a>
-            <button class="btn btn-primary btn-lg" style="margin-left: 1%;" role="button" (click)='goBack()' [disabled]="!loanForm.form.valid">Crear</button>
+            <a class="btn btn-dark btn-lg" (click)='goBack()' style="margin-right: 1%;" href="#">Volver</a>
+            <button class="btn btn-primary btn-lg" style="margin-left: 1%;" role="button" (click)='create()' [disabled]="!loanForm.form.valid">Crear</button>
           </div>
         </form>
       </div>

@@ -27,13 +27,11 @@ export class CreateloanComponent implements OnInit {
       response => {
         this.router.navigate(['/createloan'])
         Swal.fire('Prestamo Realizado', `El prestamo se guardó exitosamente`, 'success');
-      }, err => {
-        Swal.fire('Error', 'Se presentó un error guardando el prestamo', 'error');
       }
     );
   }
 
   goBack(){
-    this.router.navigate(['']);
+    this.router.navigate(['/home']);
   }
 }

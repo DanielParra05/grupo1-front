@@ -32,8 +32,6 @@ export class DeletebookComponent {
         this.cerrarModal();
         this.router.navigate(['/home'])
         Swal.fire('Libro eliminado', `El libro se ha eliminado exitosamente`, 'success');
-      }, err => {
-        Swal.fire('Error', 'Se presentó un error eliminando el libro', 'error');
       }
     );
   }
