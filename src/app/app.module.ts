@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BooksqueryComponent } from './booksquery/booksquery.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreateloanComponent } from './createloan/createloan.component';
+import { DeletebookComponent } from './deletebook/deletebook.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -26,8 +27,9 @@ const routes: Routes = [
     HeaderComponent,
     HomeComponent,
     CreatebookComponent,
-    FooterComponent,
     CreateloanComponent
+    DeletebookComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

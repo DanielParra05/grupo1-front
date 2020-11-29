@@ -15,6 +15,7 @@ export class BookService {
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
   modal: boolean = false;
+  modalEliminar : boolean = false;
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -28,12 +29,30 @@ export class BookService {
     );
   }  
 
+  delete(book: Book) : Observable<any> {
+    return this.http.delete<void>(`${environment.url_api_book}/${book.isbn}`).pipe(
+      catchError(e => {
+        console.error(e.error.mensaje);
+        Swal.fire(e.error.mensaje, e.error.error, 'error');
+        return throwError(e);
+      })
+    );
+  } 
+
   abrirModal() {
     this.modal = true;
   }
 
   cerrarModal() {
     this.modal = false;
+  }
+
+  abrirModalEliminar() {
+    this.modalEliminar = true;
+  }
+
+  cerrarModalEliminar() {
+    this.modalEliminar = false;
   }
 
   getAvailableBooks(): Observable<Book[]> {

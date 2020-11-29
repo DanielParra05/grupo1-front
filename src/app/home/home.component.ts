@@ -15,4 +15,8 @@ export class HomeComponent implements OnInit {
   abrirModal() {
     this.bookService.abrirModal();
   }
+
+  abrirModalEliminar() {
+    this.bookService.abrirModalEliminar();
+  }
 }

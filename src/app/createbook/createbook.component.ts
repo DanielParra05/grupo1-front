@@ -7,7 +7,7 @@ import { BookService } from "./../core/service/book.service";
 @Component({
   selector: "app-createbook",
   templateUrl: "./createbook.component.html",
-  styleUrls: ["./createbook.component.css"],
+  styleUrls: ['./../app.component.css'],
 })
 export class CreatebookComponent implements OnInit {
 
