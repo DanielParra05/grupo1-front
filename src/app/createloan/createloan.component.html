@@ -1,0 +1,44 @@
+<!-- Inicio de card con el form-->
+<br/>
+<br/>
+<div class="container">
+    <div class="card border-dark" style="margin-bottom: 2%; margin-top: 0.5%;">
+      <div class="card-header bg-dark text-white" style="text-align: center; font-weight: bold;">CREAR PRESTAMO</div>
+      <div class="card-body">
+        <form #loanForm="ngForm" >
+          <div class="container">
+            <div class="row">
+            <!--NOMBRE USUARIO -->
+              <div class="form-group col-sm">
+                <label for="nombre" style="font-weight: bold;" class="col-form-label">Nombre del Usuario:</label>
+                <div class="col-sm-6"></div>
+                <input type="text" class="form-control" [(ngModel)]="loan.user" name="nombre" required #nombre="ngModel">
+                <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"
+                  style="width:100%">
+                  <div *ngIf="nombre?.errors?.required" style="width:100%">
+                    Nombre del usuario es requerido
+                  </div>
+                </div>            
+              </div>
+            <!--ISBN-->
+              <div class="form-group col-sm">
+                <label for="isbn" style="font-weight: bold;" class="col-form-label">ISBN:</label>
+                <div class="col-sm-6"></div>
+                <input type="text" class="form-control" [(ngModel)]="loan.book.isbn" name="isbn" required #isbn="ngModel">
+                <div class="alert alert-danger" *ngIf="isbn.invalid && (isbn.dirty || isbn.touched)"
+                style="width:100%">
+                <div *ngIf="isbn?.errors?.required" style="width:100%">
+                  ISBN es requerido
+                </div>
+              </div> 
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <a class="btn btn-dark btn-lg" style="margin-right: 1%;" href="#">Volver</a>
+            <button class="btn btn-primary btn-lg" style="margin-left: 1%;" role="button" (click)='goBack()' [disabled]="!loanForm.form.valid">Crear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

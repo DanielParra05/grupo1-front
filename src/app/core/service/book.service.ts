@@ -42,9 +42,4 @@ export class BookService {
       .pipe(map((response) => response as Book[]));
   }
 
-  getUnavailableBooks(): Observable<Book[]> {
-    return this.http
-      .get(`${environment.url_api_book}/unavailables`)
-      .pipe(map((response) => response as Book[]));
-  }
 }

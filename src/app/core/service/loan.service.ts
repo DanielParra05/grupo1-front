@@ -6,6 +6,7 @@ import swal from "sweetalert2";
 import { Router } from "@angular/router";
 import { environment } from "./../../../environments/environment";
 import { Loan } from "../model/loan";
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: "root",
@@ -18,8 +19,18 @@ export class LoanService {
 
   getLoans(): Observable<Loan[]> {
     return this.http
-      .get(`${environment.url_api_book}/loans`)
+      .get(`${environment.url_api_loan}/loans`)
       .pipe(map((response) => response as Loan[]));
   }
+
+  create(loan: Loan) : Observable<any> {
+    return this.http.post<Loan>(`${environment.url_api_loan}`, loan, {headers : this.httpHeaders}).pipe(
+      catchError(e => {
+        console.error(e.error.mensaje);
+        Swal.fire(e.error.mensaje, e.error.error, 'error');
+        return throwError(e);
+      })
+    );
+  }  
 
 }

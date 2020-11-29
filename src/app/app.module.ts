@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BooksqueryComponent } from './booksquery/booksquery.component';
 import { FooterComponent } from './footer/footer.component';
+import { CreateloanComponent } from './createloan/createloan.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "popUpCreateBook", component: CreatebookComponent },
   { path: "booksquery", component: BooksqueryComponent },
+  { path: "createloan", component: CreateloanComponent }
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const routes: Routes = [
     HeaderComponent,
     HomeComponent,
     CreatebookComponent,
-    FooterComponent
+    FooterComponent,
+    CreateloanComponent
   ],
   imports: [
     BrowserModule,

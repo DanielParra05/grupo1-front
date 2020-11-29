@@ -7,11 +7,11 @@
   <br />
   <div class="row">
     <div class="col-sm d-flex justify-content-center">
-      <h2>Libros Prestados</h2>
+      <h2>Libros Disponibles</h2>
       <br />
     </div>
     <div class="col-sm d-flex justify-content-center">
-      <h2>Libros Disponibles</h2>
+      <h2>Libros Prestados</h2>
       <br />
     </div>
   </div>
@@ -33,6 +33,9 @@
               </tr>
         </tbody>
       </table>
+      <div *ngIf="availableBooks?.length==0" class="alert alert-info">
+        No hay registros en la base de datos.
+      </div>
     </div>
     <div class="col-sm d-flex justify-content-center">
       <table class="table table-striped">
@@ -52,6 +55,9 @@
             <td>{{loan.dateDelivery}}</td>
           </tr>
         </tbody>
+        <div *ngIf="loans?.length==0" class="alert alert-info">
+          No hay registros en la base de datos.
+        </div>
       </table>
     </div>
   </div>
