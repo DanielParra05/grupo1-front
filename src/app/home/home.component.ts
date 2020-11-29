@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { Book } from "./../core/model/book";
 import swal from "sweetalert2";
 import { BookService } from "./../core/service/book.service";
 

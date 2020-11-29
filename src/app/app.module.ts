@@ -8,11 +8,14 @@ import { HomeComponent } from './home/home.component';
 import { CreatebookComponent } from './createbook/createbook.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BooksqueryComponent } from './booksquery/booksquery.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent }, 
-  { path: 'popUpCreateBook', component : CreatebookComponent}];
+  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "home", component: HomeComponent },
+  { path: "popUpCreateBook", component: CreatebookComponent },
+  { path: "booksquery", component: BooksqueryComponent },
+];
 
 @NgModule({
   declarations: [
@@ -29,6 +32,6 @@ const routes: Routes = [
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
